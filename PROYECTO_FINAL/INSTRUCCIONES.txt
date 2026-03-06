@@ -1,0 +1,119 @@
+═══════════════════════════════════════════════════════════════
+   PROYECTO FINAL - ANDROID SIMPLE CON ARCHIVOS .KT SEPARADOS
+═══════════════════════════════════════════════════════════════
+
+📁 ESTRUCTURA DEL PROYECTO:
+
+Este proyecto tiene 5 archivos .kt separados, cada uno con su función:
+
+1. MainActivity.kt
+   └─ Punto de entrada de la app, solo configura el tema
+
+2. Navegacion.kt
+   └─ Controla qué pantalla mostrar (sin librerías complejas)
+
+3. PantallaBienvenida.kt
+   └─ Primera pantalla: saludo y nombres del equipo
+
+4. PantallaLogin.kt
+   └─ Segunda pantalla: formulario de login
+
+5. PantallaPrincipal.kt
+   └─ Tercera pantalla: opciones con botones
+
+
+📋 CÓMO FUNCIONA:
+
+• Al abrir la app: muestra PantallaBienvenida
+• Click "Comenzar": va a PantallaLogin
+• Click "Entrar": va a PantallaPrincipal
+• Click "Cerrar Sesión": regresa a PantallaBienvenida
+
+
+🔧 CÓMO COPIAR LOS ARCHIVOS EN ANDROID STUDIO:
+
+PASO 1: Copiar archivos .kt
+────────────────────────────
+Todos los archivos .kt van a la ruta:
+composeApp/src/androidMain/kotlin/com/example/proyecto1/
+
+Copia estos archivos (están en PROYECTO_FINAL/):
+  ✓ MainActivity.kt
+  ✓ Navegacion.kt
+  ✓ PantallaBienvenida.kt
+  ✓ PantallaLogin.kt
+  ✓ PantallaPrincipal.kt
+
+
+PASO 2: Copiar build.gradle.kts
+────────────────────────────────
+El archivo build.gradle.kts va a:
+composeApp/build.gradle.kts
+
+Reemplaza el archivo completo con el de PROYECTO_FINAL/
+
+
+PASO 3: Sincronizar proyecto
+─────────────────────────────
+En Android Studio:
+  1. Click en "Sync Now" (aparece banner arriba)
+  2. Espera a que termine
+  3. Build → Rebuild Project
+
+
+PASO 4: Crear emulador (si no tienes uno)
+──────────────────────────────────────────
+  1. Tools → Device Manager
+  2. Click "Create Device"
+  3. Selecciona Pixel 5 → Next
+  4. Selecciona API 34 (Android 14) → Next → Finish
+  5. Click ▶️ para iniciar el emulador
+
+
+PASO 5: Ejecutar la app
+────────────────────────
+  1. Asegúrate que el emulador esté corriendo
+  2. Click en botón verde ▶️ Run en Android Studio
+  3. ¡La app debería abrirse en el emulador!
+
+
+✅ VENTAJAS DE ESTA VERSIÓN:
+
+• Archivos .kt SEPARADOS (fácil encontrar cada pantalla)
+• SIMPLE: sin Navigation library, sin ViewModels, sin Repository
+• FUNCIONAL: navegación básica pero efectiva
+• SIN ERRORES: solo dependencias esenciales de Compose
+• RÁPIDO: compila rápido por ser simple
+
+
+🎯 SI QUIERES AGREGAR MÁS COSAS:
+
+Para agregar un botón nuevo en PantallaPrincipal.kt:
+```kotlin
+Button(
+    onClick = { /* tu acción aquí */ },
+    modifier = Modifier.fillMaxWidth()
+) {
+    Text("Mi Nuevo Botón")
+}
+```
+
+Para agregar una pantalla nueva:
+1. Crea nuevo archivo (ej: PantallaNueva.kt)
+2. Agrega el @Composable fun PantallaNueva(...)
+3. En Navegacion.kt, añade otro caso en el when:
+   "nueva" -> PantallaNueva(...)
+
+
+💡 DIFERENCIA CON LA VERSIÓN ANTERIOR:
+
+Antes: Todo en UN solo MainActivity.kt (difícil de organizar)
+Ahora: Cada pantalla en su PROPIO archivo .kt (más ordenado)
+
+La lógica es la misma (simple), pero ahora está organizada
+en archivos separados como pediste.
+
+
+═══════════════════════════════════════════════════════════════
+   ¿Problemas? Verifica que el package sea: com.example.proyecto1
+═══════════════════════════════════════════════════════════════
