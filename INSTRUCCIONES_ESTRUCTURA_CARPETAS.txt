@@ -1,0 +1,155 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  ⚠️ PROBLEMA: Los archivos necesitan estar en CARPETAS ESPECÍFICAS         ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+🚨 ERROR COMÚN:
+   ❌ NO copies todos los archivos en la misma carpeta
+   ✅ DEBES crear la estructura de carpetas correcta
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📁 ESTRUCTURA EXACTA QUE NECESITAS EN ANDROID STUDIO:
+
+app/src/main/java/com/example/proyecto1/
+│
+├── MainActivity.kt                    👈 MainActivity aquí (raíz)
+│
+├── model/                             👈 CREAR carpeta "model"
+│   ├── Usuario.kt
+│   ├── Sala.kt
+│   └── Reserva.kt
+│
+├── data/                              👈 CREAR carpeta "data"
+│   └── ReservaRepository.kt
+│
+├── viewmodel/                         👈 CREAR carpeta "viewmodel"
+│   └── ReservaViewModel.kt
+│
+├── navigation/                        👈 CREAR carpeta "navigation"
+│   └── Navigation.kt
+│
+└── ui/                                👈 CREAR carpeta "ui"
+    ├── screens/                       👈 CREAR carpeta "screens" dentro de "ui"
+    │   ├── WelcomeScreen.kt
+    │   ├── LoginScreen.kt
+    │   └── HomeScreen.kt
+    │
+    └── theme/                         👈 CREAR carpeta "theme" dentro de "ui"
+        ├── Theme.kt
+        └── Type.kt
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📝 PASOS CORRECTOS EN ANDROID STUDIO:
+
+PASO 1: CREAR CARPETAS
+------------------------
+1. En Android Studio, ve a la vista "Project" (no "Android")
+2. Navega a: app/src/main/java/com/example/proyecto1/
+3. Click derecho en "proyecto1" > New > Package
+4. Crea estos packages (carpetas):
+   ✅ model
+   ✅ data
+   ✅ viewmodel
+   ✅ navigation
+   ✅ ui
+   
+5. Click derecho en "ui" > New > Package:
+   ✅ ui.screens
+   ✅ ui.theme
+
+PASO 2: COPIAR ARCHIVOS EN SU CARPETA CORRECTA
+-----------------------------------------------
+
+📱 EN LA RAÍZ (com/example/proyecto1/):
+   • MainActivity.kt
+   
+   Cómo: Click derecho en "proyecto1" > New > Kotlin Class/File
+         Nombre: MainActivity
+         Pega el contenido del MainActivity.kt de GitHub
+
+📦 EN LA CARPETA "model":
+   • Usuario.kt
+   • Sala.kt  
+   • Reserva.kt
+   
+   Cómo: Click derecho en "model" > New > Kotlin Class/File
+         Crea cada archivo y pega su contenido
+
+💾 EN LA CARPETA "data":
+   • ReservaRepository.kt
+   
+   Cómo: Click derecho en "data" > New > Kotlin Class/File
+         Nombre: ReservaRepository
+         Pega el contenido
+
+🔄 EN LA CARPETA "viewmodel":
+   • ReservaViewModel.kt
+   
+   Cómo: Click derecho en "viewmodel" > New > Kotlin Class/File
+         Nombre: ReservaViewModel
+         Pega el contenido
+
+🧭 EN LA CARPETA "navigation":
+   • Navigation.kt
+   
+   Cómo: Click derecho en "navigation" > New > Kotlin Class/File
+         Nombre: Navigation
+         Pega el contenido
+
+📱 EN LA CARPETA "ui/screens":
+   • WelcomeScreen.kt
+   • LoginScreen.kt
+   • HomeScreen.kt
+   
+   Cómo: Click derecho en "screens" > New > Kotlin Class/File
+         Crea cada archivo y pega su contenido
+
+🎨 EN LA CARPETA "ui/theme":
+   • Theme.kt
+   • Type.kt
+   
+   Cómo: Click derecho en "theme" > New > Kotlin Class/File
+         Crea cada archivo y pega su contenido
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⚠️ IMPORTANTE - PANTALLAS FALTANTES:
+
+Navigation.kt intenta usar pantallas que NO están incluidas:
+   • CalendarioScreen
+   • DisponibilidadScreen  
+   • MisReservasScreen
+   • PerfilScreen
+   • ReservaScreen
+
+SOLUCIÓN TEMPORAL:
+------------------
+Voy a crear versiones BÁSICAS de estas pantallas para que compile.
+Las crearé con solo un texto simple para que no haya errores.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 RESULTADO FINAL:
+
+Cuando termines, deberías ver en Android Studio (vista Project):
+
+app
+ └── src
+     └── main
+         └── java
+             └── com
+                 └── example
+                     └── proyecto1
+                         ├── MainActivity.kt
+                         ├── data
+                         ├── model
+                         ├── navigation
+                         ├── ui
+                         └── viewmodel
+
+═══════════════════════════════════════════════════════════════════════════════
+
+💡 PRÓXIMO PASO:
+   Te voy a crear las 5 pantallas faltantes en versión BÁSICA
+   para que el proyecto compile sin errores.
