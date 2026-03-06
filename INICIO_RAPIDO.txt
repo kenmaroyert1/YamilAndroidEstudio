@@ -1,0 +1,178 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  🚀 GUÍA DE INICIO RÁPIDO - COPIA ESTO EXACTAMENTE                          ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+✅ MAINACTIVITY.KT CORREGIDO Y SIMPLIFICADO
+
+El MainActivity ahora es MUY SIMPLE y funciona directamente:
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📝 CÓDIGO DEL MainActivity.kt:
+
+package com.example.proyecto1
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import com.example.proyecto1.navigation.ReservaApp
+import com.example.proyecto1.ui.theme.ReservaSalasTheme
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            ReservaSalasTheme {
+                ReservaApp()
+            }
+        }
+    }
+}
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎯 FLUJO DE LA APLICACIÓN:
+
+1. MainActivity inicia → llama a ReservaSalasTheme → llama a ReservaApp()
+
+2. ReservaApp() (en Navigation.kt) inicia el NavHost con:
+   startDestination = Screen.Welcome.route
+   
+3. Screen.Welcome muestra WelcomeScreen con:
+   - Logo de la app
+   - 4 nombres del equipo ⭐ PANTALLA 1 DEL PARCIAL
+   - Botón "Comenzar"
+
+4. Al presionar "Comenzar" → navega a LoginScreen ⭐ PANTALLA 2 DEL PARCIAL
+   - Campo email
+   - Campo contraseña
+   - Selector tipo de usuario
+   - Botón "Iniciar Sesión"
+
+5. Al iniciar sesión → navega a HomeScreen ⭐ PANTALLA 3 DEL PARCIAL
+   - Búsqueda de salas
+   - Listado de salas
+   - Bottom Navigation con 5 opciones
+
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ LO QUE HACE EL MAINACTIVITY:
+
+📱 onCreate(): Se ejecuta cuando la app inicia
+   └─ setContent { }: Define el contenido visible
+      └─ ReservaSalasTheme { }: Aplica el tema (colores, tipografía)
+         └─ ReservaApp(): Inicia el sistema de navegación
+
+SIMPLE, DIRECTO, FUNCIONAL ✅
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⚠️ SI LA APP NO INICIA, VERIFICA:
+
+1️⃣ ESTRUCTURA DE CARPETAS (debe ser exacta):
+
+com.example.proyecto1/
+├── MainActivity.kt                   ← Raíz (NO dentro de ninguna carpeta)
+├── data/
+│   └── ReservaRepository.kt
+├── model/
+│   ├── Usuario.kt
+│   ├── Sala.kt
+│   └── Reserva.kt
+├── viewmodel/
+│   └── ReservaViewModel.kt
+├── navigation/
+│   └── Navigation.kt
+└── ui/
+    ├── screens/
+    │   ├── WelcomeScreen.kt
+    │   ├── LoginScreen.kt
+    │   ├── HomeScreen.kt
+    │   ├── CalendarioScreen.kt
+    │   ├── DisponibilidadScreen.kt
+    │   ├── MisReservasScreen.kt
+    │   ├── PerfilScreen.kt
+    │   └── ReservaScreen.kt
+    └── theme/
+        ├── Theme.kt
+        └── Type.kt
+
+═══════════════════════════════════════════════════════════════════════════════
+
+2️⃣ DEPENDENCIAS EN build.gradle:
+
+android {
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.8"
+    }
+}
+
+dependencies {
+    implementation("androidx.activity:activity-compose:1.8.2")
+    implementation(platform("androidx.compose:compose-bom:2024.02.00"))
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+}
+
+═══════════════════════════════════════════════════════════════════════════════
+
+3️⃣ PASOS DESPUÉS DE COPIAR TODO:
+
+1. File > Sync Project with Gradle Files
+2. Build > Clean Project
+3. Build > Rebuild Project
+4. Conecta dispositivo o inicia emulador
+5. Run ▶️
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📱 CUANDO LA APP INICIE VERÁS:
+
+┌─────────────────────────────┐
+│     🏛️ (ícono edificio)     │
+│                             │
+│ Sistema de Reserva de Salas │
+│        Universidad          │
+│                             │
+│  ┌─────────────────────┐   │
+│  │ Equipo de Desarrollo│   │
+│  ├─────────────────────┤   │
+│  │ Juan Pérez García   │   │
+│  │ Desarrollador       │   │
+│  ├─────────────────────┤   │
+│  │ María López         │   │
+│  │ Diseñadora UI/UX    │   │
+│  ├─────────────────────┤   │
+│  │ Carlos Sánchez      │   │
+│  │ QA Tester          │   │
+│  ├─────────────────────┤   │
+│  │ Ana Martínez        │   │
+│  │ Project Manager     │   │
+│  └─────────────────────┘   │
+│                             │
+│    [ COMENZAR ]            │
+└─────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🔗 DESCARGA LOS ARCHIVOS:
+   https://github.com/kenmaroyert1/YamilAndroidEstudio/tree/parcial-1
+
+✅ MainActivity ya corregido y subido
+✅ Código simplificado al máximo
+✅ Funciona desde el primer inicio
+
+═══════════════════════════════════════════════════════════════════════════════
+
+💡 RECUERDA:
+
+✅ Copia el código COMPLETO de cada archivo desde GitHub
+✅ NO modifiques los imports ni los package names
+✅ Respeta la estructura de carpetas EXACTAMENTE
+✅ Haz Sync después de copiar todos los archivos
+
+═══════════════════════════════════════════════════════════════════════════════
