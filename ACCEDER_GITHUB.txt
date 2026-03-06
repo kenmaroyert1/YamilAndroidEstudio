@@ -1,0 +1,66 @@
+╔══════════════════════════════════════════════════════════════╗
+║           ACCEDER A TUS ARCHIVOS EN GITHUB                  ║
+╚══════════════════════════════════════════════════════════════╝
+
+✅ LOS ARCHIVOS YA ESTÁN SUBIDOS EN GITHUB!
+
+═══════════════════════════════════════════════════════════════
+
+📍 PASOS PARA VER TUS ARCHIVOS:
+
+1. Abre tu navegador
+
+2. Ve a tu repositorio:
+   https://github.com/kenmaroyert1/YamilAndroidEstudio
+
+3. ⚠️ IMPORTANTE: Cambia a la rama "parcial-1"
+   - Busca el botón que dice "main" (arriba a la izquierda)
+   - Click en él
+   - Selecciona "parcial-1"
+
+4. ¡Verás tus 12 archivos .kt listos para copiar!
+
+═══════════════════════════════════════════════════════════════
+
+🔗 LINK DIRECTO A LA RAMA PARCIAL-1:
+https://github.com/kenmaroyert1/YamilAndroidEstudio/tree/parcial-1
+
+═══════════════════════════════════════════════════════════════
+
+📂 ARCHIVOS DISPONIBLES (12 archivos):
+
+✓ MainActivity.kt
+✓ Usuario.kt
+✓ Sala.kt
+✓ Reserva.kt
+✓ ReservaRepository.kt
+✓ ReservaViewModel.kt
+✓ Navigation.kt
+✓ WelcomeScreen.kt (Pantalla 1)
+✓ LoginScreen.kt (Pantalla 2)
+✓ HomeScreen.kt (Pantalla 3)
+✓ Theme.kt
+✓ Type.kt
+
+PLUS:
+✓ README_ARCHIVOS.txt (guía de rutas)
+✓ COMO_USAR.txt (instrucciones)
+
+═══════════════════════════════════════════════════════════════
+
+📥 CÓMO COPIAR CADA ARCHIVO:
+
+1. Click en el archivo (ej: MainActivity.kt)
+2. Click en el botón "Raw" (arriba a la derecha)
+3. Ctrl+A (seleccionar todo)
+4. Ctrl+C (copiar)
+5. En Android Studio: pega en el archivo correspondiente
+
+═══════════════════════════════════════════════════════════════
+
+✅ CONFIRMACIÓN:
+   Rama actual: parcial-1
+   Último commit: 77b985f "Agregada guía de uso"
+   Estado: Sincronizado con GitHub ✓
+
+═══════════════════════════════════════════════════════════════
