@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Reserva Salas Universidad</string>
+    
+    <!-- Login -->
+    <string name="login_title">Sistema de Reserva de Salas</string>
+    <string name="login_subtitle">Universidad</string>
+    <string name="email_hint">Correo institucional</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="user_type">Tipo de usuario</string>
+    <string name="login_button">Iniciar Sesión</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    
+    <!-- Home -->
+    <string name="home_title">Reserva de Salas</string>
+    <string name="search_rooms">Buscar salas</string>
+    <string name="my_reservations">Mis Reservas</string>
+    <string name="logout">Cerrar Sesión</string>
+    <string name="filter">Filtrar</string>
+    <string name="all_rooms">Todas</string>
+    <string name="classrooms">Aulas</string>
+    <string name="labs">Labs</string>
+    
+    <!-- Room details -->
+    <string name="capacity">%d personas</string>
+    <string name="equipment_count">%d equipos</string>
+    
+    <!-- Reservation -->
+    <string name="new_reservation">Nueva Reserva</string>
+    <string name="reservation_date">Fecha de reserva</string>
+    <string name="schedule">Horario</string>
+    <string name="start_time">Hora Inicio</string>
+    <string name="end_time">Hora Fin</string>
+    <string name="purpose">Propósito de la reserva</string>
+    <string name="purpose_hint">Ej: Reunión de grupo, Clase, Estudio...</string>
+    <string name="participants_number">Número de participantes</string>
+    <string name="confirm_reservation">Confirmar Reserva</string>
+    
+    <!-- My Reservations -->
+    <string name="my_reservations_title">Mis Reservas</string>
+    <string name="active_reservations">Reservas Activas</string>
+    <string name="history">Historial</string>
+    <string name="no_reservations">No tienes reservas</string>
+    <string name="no_reservations_subtitle">Explora las salas disponibles y crea tu primera reserva</string>
+    <string name="cancel_reservation">Cancelar Reserva</string>
+    
+    <!-- Common -->
+    <string name="back">Volver</string>
+    <string name="cancel">Cancelar</string>
+    <string name="confirm">Confirmar</string>
+    <string name="error">Error</string>
+    <string name="loading">Cargando…</string>
+</resources>
