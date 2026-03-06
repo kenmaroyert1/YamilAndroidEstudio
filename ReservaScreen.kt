@@ -1,6 +1,8 @@
 package com.example.proyecto1.ui.screens
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -13,12 +15,22 @@ import com.example.proyecto1.model.Sala
 @Composable
 fun ReservaScreen(
     sala: Sala? = null,
-    onReservaCreada: () -> Unit = {}
+    onNavigateBack: () -> Unit = {},
+    onReservaCreada: () -> Unit = {},
+    viewModel: com.example.proyecto1.viewmodel.ReservaViewModel? = null
 ) {
     Scaffold(
         topBar = {
             TopAppBar(
                 title = { Text("Nueva Reserva") },
+                navigationIcon = {
+                    androidx.compose.material3.IconButton(onClick = onNavigateBack) {
+                        androidx.compose.material3.Icon(
+                            androidx.compose.material.icons.Icons.Default.ArrowBack,
+                            "Volver"
+                        )
+                    }
+                },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     titleContentColor = MaterialTheme.colorScheme.onPrimaryContainer

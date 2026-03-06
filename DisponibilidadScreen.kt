@@ -1,20 +1,32 @@
 package com.example.proyecto1.ui.screens
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.proyecto1.viewmodel.ReservaViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DisponibilidadScreen() {
+fun DisponibilidadScreen(
+    onNavigateBack: () -> Unit = {},
+    viewModel: ReservaViewModel = viewModel()
+) {
     Scaffold(
         topBar = {
             TopAppBar(
                 title = { Text("Disponibilidad") },
+                navigationIcon = {
+                    IconButton(onClick = onNavigateBack) {
+                        Icon(Icons.Default.ArrowBack, "Volver")
+                    }
+                },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     titleContentColor = MaterialTheme.colorScheme.onPrimaryContainer
