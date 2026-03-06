@@ -1,0 +1,116 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  📱 MAINACTIVITY.KT - VERSIÓN PARA COPIAR EN ANDROID STUDIO                 ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+⚠️ IMPORTANTE: NO copies el "package" statement. Android Studio lo genera automáticamente.
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📋 PASOS EN ANDROID STUDIO:
+
+1. Click derecho en: com.example.proyecto1 (carpeta raíz)
+2. New > Kotlin Class/File
+3. Escribe: MainActivity
+4. Selecciona: Class (esta vez SÍ selecciona Class)
+5. Se creará el archivo con esto:
+
+   package com.example.proyecto1
+
+   class MainActivity {
+
+   }
+
+6. BORRA TODO el contenido del archivo (Ctrl+A, Delete)
+7. COPIA Y PEGA esto (sin el package):
+
+═══════════════════════════════════════════════════════════════════════════════
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.compose.rememberNavController
+import com.example.proyecto1.navigation.ReservaApp
+import com.example.proyecto1.ui.theme.ReservaSalasTheme
+import com.example.proyecto1.viewmodel.ReservaViewModel
+
+class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContent {
+            ReservaSalasTheme {
+                AppContent()
+            }
+        }
+    }
+}
+
+@Composable
+private fun AppContent() {
+    val navController = rememberNavController()
+    val viewModel: ReservaViewModel = viewModel()
+    
+    Scaffold(
+        modifier = Modifier.fillMaxSize()
+    ) { innerPadding ->
+        Surface(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding),
+            color = MaterialTheme.colorScheme.background
+        ) {
+            ReservaApp(
+                navController = navController,
+                viewModel = viewModel
+            )
+        }
+    }
+}
+
+═══════════════════════════════════════════════════════════════════════════════
+
+8. Presiona Ctrl+Alt+L (formatea el código)
+9. Guarda (Ctrl+S)
+10. File > Sync Project with Gradle Files
+
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ RESULTADO:
+
+El archivo quedará así automáticamente:
+
+package com.example.proyecto1  ← Android Studio agrega esto
+
+import android.os.Bundle
+...
+(resto del código que pegaste)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+⚠️ SI AÚN NO FUNCIONA:
+
+Opción alternativa: Deja que Android Studio genere el MainActivity automáticamente:
+
+1. Al crear el proyecto, selecciona "Empty Activity"
+2. Android Studio crea MainActivity.kt automáticamente
+3. Solo REEMPLAZA el contenido de la función onCreate por:
+
+   enableEdgeToEdge()
+   setContent {
+       ReservaSalasTheme {
+           AppContent()
+       }
+   }
+
+4. Y AGREGA la función AppContent() al final del archivo
+
+═══════════════════════════════════════════════════════════════════════════════
